@@ -1,0 +1,56 @@
+
+@font-face {
+	font-family: 'Stolzl-Bold';
+	src: url('/fonts/Stolzl/Stolzl-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl-Book';
+	src: url('/fonts/Stolzl/Stolzl-Book.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl-Light';
+	src: url('/fonts/Stolzl/Stolzl-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl-Medium';
+	src: url('/fonts/Stolzl/Stolzl-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl-Regular';
+	src: url('/fonts/Stolzl/Stolzl-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stolzl-Thin';
+	src: url('/fonts/Stolzl/Stolzl-Thin.woff2') format('woff2');
+	font-weight: 100;
+	font-style: normal;
+}
+
+:root {
+
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: black;
+	font-family: 'Stolzl-Regular', sans-serif;
+	min-height: 100vh;
+	color: white;
+}
