@@ -1,50 +1,53 @@
 ---
-import Dot from "./icons/Dot.astro";
 import GithubLogo from "./icons/GithubLogo.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
 ---
 
 <footer class="w-full border-t border-[#444444]">
 	<div
-		class="container my-12 mx-auto flex flex-col md:flex-row justify-between items-start"
+		class="w-full my-12 flex flex-col md:flex-row justify-between items-start px-6"
 	>
 		<!-- Left Section -->
-		<div class="sm:w-full md:w-2/4 flex flex-row items-start">
-			<div>
-				<Dot />
-			</div>
-			<div class="ml-2">
-				<h4 class="text-4xl text-bold">Let's Connect</h4>
-				<p class="text-gray-500 mt-4">
-					Contact me if you are interested on my profile or you have an interesting project.
-				</p>
-				<div>
-					<p>
-						Say hello at <a
-							href="mailto:alexander.acuna@ucsm.edu.pe"
-							class="text-gray-500 hover:text-white"
-							>alexander.acuna@ucsm.edu.pe</a>
-					</p>
-					
-					<p>
-						For more info, here's my <a href="#" class="text-gray-500 hover:text-white">resume</a>
-					</p>
-					<div class="flex gap-2">
-						<a href="#">
-							<GithubLogo class="h-6 w-6 text-gray-500 hover:text-white" /> 
-						</a>
-						<a href="#">
-							<LinkedinLogo class="h-6 w-6 text-gray-500 hover:text-white"/> 
-						</a>
-					</div>
-				</div>
-				
+		<div class="w-full mb-6 md:mb-0 md:w-2/4 flex flex-col items-start md:pr-12">
+			<h4 class="text-4xl font-bold">Let's Connect</h4>
+			<p class="text-gray-500 mt-4">
+				If you are interested in my profile or have an interesting
+				project, please contact me. I look forward to hearing from you
+				and will respond promptly. Thank you for reaching out. Can you
+				mail me at <a
+					href="mailto:alexander.acuna@ucsm.edu.pe"
+					class="text-blue-500">alexander.acuna@ucsm.edu.pe</a
+				> or see my resume at <a
+					href="URL_TO_YOUR_RESUME"
+					class="text-blue-500">this link</a
+				>?
+			</p>
+
+			<div class="mt-4">
+				<ul class="flex flex-row gap-x-6">
+					<li>
+						<LinkedinLogo
+							class="h-6 w-6 text-gray-500 hover:text-white inline"
+						/>
+						<a href="#" class="text-gray-500 hover:text-white"
+							>My Linkedin</a
+						>
+					</li>
+					<li>
+						<GithubLogo
+							class="h-6 w-6 text-gray-500 hover:text-white inline"
+						/>
+						<a href="#" class="text-gray-500 hover:text-white"
+							>My Github</a
+						>
+					</li>
+				</ul>
 			</div>
 		</div>
 
 		<!-- Right Section -->
-		<div class="sm:w-full md:w-2/4">
-			<div class="grid gap-4 gap-y-2 text-sm grid-cols-1">
+		<div class="w-full md:w-2/4">
+			<div class="flex flex-col">
 				<div>
 					<label for="full_name">Full Name</label>
 					<input
@@ -57,7 +60,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				</div>
 
 				<div>
-					<label fomd:col-span-1r="email">Email Address</label>
+					<label for="email">Email Address</label>
 					<input
 						type="text"
 						name="email"
@@ -88,7 +91,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				<div>
 					<button
 						style="background-color: #CBFE47; color:black; font-weight:bolder;"
-      					class="bg-white rounded-lg px-6 py-4 mt-3"
+						class="bg-white rounded-lg px-6 py-4 mt-3"
 					>
 						Get in touch
 					</button>
@@ -99,7 +102,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 	<div
 		class="w-full py-6 px-12 flex flex-col justify-between md:flex-row border-t border-[#444444]"
 	>
-		<ul class="flex flex-row gap-x-4">
+		<ul class="flex flex-row gap-x-4 flex-wrap justify-center">
 			<li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
 			<li>
 				<a href="#" class="text-gray-400 hover:text-white">Our team</a>
@@ -112,7 +115,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 			</li>
 		</ul>
 
-		<div>
+		<div class="text-center">
 			<span> Copyright © Alexander Developer </span>
 		</div>
 	</div>
