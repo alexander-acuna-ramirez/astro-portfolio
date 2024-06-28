@@ -1,14 +1,62 @@
 ---
 import Experience from "./Experience.astro"
 ---
+
 <section id="experience" class="w-full flex flex-wrap px-6 md:px-12 mt-12 md:mt-0">
     <div class="mb-12">
-        <h2 class="text-3xl md:text-5xl text-bold">Take a look at my past<br /> experience</h2>
+        <h2 class="text-3xl md:text-5xl font-bold">Take a look at my past<br /> experience</h2>
     </div>
     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-        <Experience />
-        <Experience />
-        <Experience />
-        <Experience />
+        <Experience 
+            company="Caja Arequipa"
+            position="FullStack Developer"
+            startDate="Mar, 2024"
+            endDate="Now"
+            summary="Developed and maintained web systems, implementing custom solutions with Java, Spring Boot, Vue.js, and Oracle PL/SQL to ensure optimal performance and security."
+            skills={[
+                { name: "Java", text: "white", color: "#007396" },
+                { name: "Spring Boot", text: "white", color: "#6db33f" },
+                { name: "Vue.js", text: "white", color: "#42b883" },
+                { name: "Oracle PL/SQL", text: "white", color: "#F80000" }
+            ]}
+        />
+        <Experience 
+            company="Consultoria Digital del Perú"
+            position="FullStack Developer"
+            startDate="Aug, 2023"
+            endDate="Mar, 2024"
+            summary="Performed maintenance and enhancements on web systems, and developed new functionalities with Java, Spring Boot, PHP, Vue.js, JavaScript, and MySQL."
+            skills={[
+                { name: "PHP", text: "white", color: "#777BB4" },
+                { name: "Laravel", text: "white", color: "#FF2D20" },
+                { name: "JavaScript", text: "white", color: "#F7DF1E" },
+                { name: "SQLServer", text: "white", color: "#CC2927" }
+            ]}
+        />
+        <Experience 
+            company="Byte Soluciones"
+            position="Intern Developer"
+            startDate="Jan, 2023"
+            endDate="Aug, 2023"
+            summary="Assisted in development and maintenance of web applications, focusing on PHP, Laravel, Vue.js, and MySQL."
+            skills={[
+                { name: "PHP", text: "white", color: "#777BB4" },
+                { name: "Laravel", text: "white", color: "#FF2D20" },
+                { name: "Vue.js", text: "white", color: "#42b883" },
+                { name: "MySQL", text: "white", color: "#00758F" }
+            ]}
+        />
+        <Experience 
+            company="Universidad Católica de Santa María"
+            position="University Assistant"
+            startDate="Aug, 2022"
+            endDate="Dec, 2022"
+            summary="Assisted in the development of an attendance app for doctors using Ionic, Vue 3, and TypeScript."
+            skills={[
+                { name: "Ionic", text: "white", color: "#3880FF" },
+                { name: "Vue.js", text: "white", color: "#42b883" },
+                { name: "TypeScript", text: "white", color: "#3178C6" }
+            ]}
+        />
     </div>
 </section>

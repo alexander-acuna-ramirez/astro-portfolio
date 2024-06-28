@@ -1,6 +1,48 @@
 ---
-import Dot from '../icons/Dot.astro'
+import Dot from "../icons/Dot.astro";
+import Chip from "../common/Chip.astro";
+
+const { company, position, startDate, endDate, summary, skills } = Astro.props;
 ---
+
+<div class="border-b border-[#444444] flex flex-row gap-3 items-center pb-5">
+    <div class="h-full"><Dot /></div>
+    <div class="h-full w-full">
+        <div class="flex justify-between mb-4 w-full">
+            <div>
+                <h3 class="text-1xl md:text-2xl font-bold">
+                    {company}
+                </h3>
+                <span>
+                    {position}
+                </span>
+            </div>
+
+            <span>
+                {startDate} - {endDate}
+            </span>
+        </div>
+        <p class="text-gray-500">
+            {summary}
+        </p>
+        <div class="flex gap-x-2 gap-y-2 flex-row mt-2 flex-wrap">
+            {
+                skills.map(
+                    (skill: { name: String; text: String; color: String }) => (
+                        <Chip
+                            name={skill.name}
+                            text={skill.text}
+                            color={skill.color}
+                        />
+                    ),
+                )
+            }
+        </div>
+        <!-- text-[#B9B9B9] -->
+    </div>
+</div>
+
+<!--
 <div class="border-b border-[#444444] flex flex-row gap-3 items-center pb-5">
     <div class="h-full"><Dot/> </div>
     <div>
@@ -21,7 +63,5 @@ import Dot from '../icons/Dot.astro'
         <p class="text-gray-500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum enim, temporibus in quam est?
         </p>
-        <!-- text-[#B9B9B9] -->
     </div>
-
-</div>
+</div>-->
