@@ -53,4 +53,5 @@ body{
 	font-family: 'Stolzl-Regular', sans-serif;
 	min-height: 100vh;
 	color: white;
+	scroll-behavior: smooth !important;
 }
