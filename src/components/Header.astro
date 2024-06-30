@@ -2,6 +2,7 @@
 import HeaderLogo from "./icons/HeaderLogo.astro";
 import GithubLogo from "./icons/GithubLogo.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
+import MobileMenu from "./MobileMenu.astro";
 ---
 
 <header
@@ -33,11 +34,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
             </ul>
         </nav>
         <div class="md:hidden">
-            <div class="space-y-2 w-12 p-2">
-                <span class="block w-8 h-0.5 bg-gray-300"></span>
-                <span class="block w-8 h-0.5 bg-gray-300"></span>
-                <span class="block w-8 h-0.5 bg-gray-300"></span>
-            </div>
+            <MobileMenu/>
         </div>
     </div>
 

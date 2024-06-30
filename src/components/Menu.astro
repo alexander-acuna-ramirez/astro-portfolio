@@ -1,0 +1,57 @@
+<div class="fixed bg-black w-screen h-screen z-50 top-0 px-6 py-6" id="menu">
+    <div class="h-1/6 w-full flex justify-end">
+        <div class="w-10 p-2 cursor-pointer group rounded-md" id="closeBtn">
+            <span class="block w-6 h-0.5 bg-gray-300 transition-colors duration-300 ease-in-out group-hover:bg-[#CBFE47]"></span>
+            <span class="block w-6 h-0.5 bg-gray-300 transition-colors duration-300 ease-in-out group-hover:bg-[#CBFE47]"></span>
+        </div>
+    </div>
+    <ul class="h-4/6 flex flex-col gap-y-4 w-full">
+        <li>
+            <a href="#" class="animate__animated animate__fadeInLeft text-2xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#" class="animate__animated animate__fadeInLeft text-2xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                Experience
+            </a>
+        </li>
+        <li>
+            <a href="#" class="animate__animated animate__fadeInLeft text-2xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                Portfolio
+            </a>
+        </li>
+        <li>
+            <a href="#" class="animate__animated animate__fadeInLeft text-2xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                Contact Me
+            </a>
+        </li>
+    </ul>
+    <div class="h-1/6 w-full flex justify-center items-end pb-4">
+        <span class="text-gray-500">
+            Coded with ♥ by Me
+        </span>
+    </div>
+</div>
+
+<script>
+    const closeBtn = document.getElementById("closeBtn");
+    const menu = document.getElementById("menu");
+
+    closeBtn?.addEventListener("click", (_) => {
+        menu?.classList.add("hidden")
+        console.log("Clicked");
+    });
+</script>
+<style scoped>
+    #closeBtn span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+    }
+
+    #closeBtn span:nth-child(2) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -0.125rem;
+    }
+</style>

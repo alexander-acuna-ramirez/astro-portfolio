@@ -1,0 +1,16 @@
+<div class="hamburger space-y-1 w-10 p-2 cursor-pointer group rounded-md" id="menuBtn">
+    <span class="block w-6 h-0.5 bg-gray-300 transition-colors duration-300 ease-in-out group-hover:bg-[#CBFE47]"></span>
+    <span class="block w-6 h-0.5 bg-gray-300 transition-colors duration-300 ease-in-out group-hover:bg-[#CBFE47]"></span>
+    <span class="block w-6 h-0.5 bg-gray-300 transition-colors duration-300 ease-in-out group-hover:bg-[#CBFE47]"></span>
+</div>
+
+
+<script>
+    const menuBtn = document.getElementById("menuBtn");
+    const menu = document.getElementById("menu");
+
+    menuBtn?.addEventListener("click", (_) => {
+        menu?.classList.remove("hidden")
+        console.log("Clicked");
+    });
+</script>

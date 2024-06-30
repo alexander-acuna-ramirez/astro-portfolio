@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Menu from '../components/Menu.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -16,5 +17,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<slot/> 
 		</main>
 		<Footer />
+		<Menu/>
 	</body>
 </html>
