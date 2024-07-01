@@ -22,6 +22,6 @@ import Skills from '../components/Skills/Skills.astro';
 			if(entry.isIntersecting) entry.target.classList.add("animate__fadeInUp")
 		});
 	});
-	const toAnimate = document.querySelectorAll('[animate]');
+	const toAnimate = document.querySelectorAll('section[animate]');
 	toAnimate.forEach(e => observer.observe(e));
 </script>

@@ -8,7 +8,7 @@ import Experience from "./Experience.astro"
     </div>
     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
         <Experience 
-            className=""
+            animate
             company="Caja Arequipa"
             position="FullStack Developer"
             startDate="Mar, 2024"
@@ -22,7 +22,7 @@ import Experience from "./Experience.astro"
             ]}
         />
         <Experience 
-            className=""
+            animate
             company="Consultoria Digital del Perú"
             position="FullStack Developer"
             startDate="Aug, 2023"
@@ -36,7 +36,7 @@ import Experience from "./Experience.astro"
             ]}
         />
         <Experience 
-            className=""
+            animate
             company="Byte Soluciones"
             position="Intern Developer"
             startDate="Jan, 2023"
@@ -50,7 +50,7 @@ import Experience from "./Experience.astro"
             ]}
         />
         <Experience 
-            className=""
+            animate
             company="Universidad Católica de Santa María"
             position="University Assistant"
             startDate="Aug, 2022"
@@ -64,3 +64,14 @@ import Experience from "./Experience.astro"
         />
     </div>
 </section>
+<script type="module">
+    const elements = document.querySelectorAll("div[animate]");
+    console.log(elements)
+    const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if(entry.isIntersecting) entry.target.classList.add("animate__fadeInUp")
+		});
+	});
+
+    elements.forEach(e => observer.observe(e));
+</script>

@@ -5,7 +5,7 @@ import Chip from "../common/Chip.astro";
 const { company, position, startDate, endDate, summary, skills} = Astro.props;
 ---
 
-<div class="border-b border-[#444444] flex flex-row gap-3 items-center pb-5" >
+<div { ...Astro.props } class="border-b border-[#444444] flex flex-row gap-3 items-center pb-5 animate__animated">
     <div class="h-full"><Dot /></div>
     <div class="h-full w-full">
         <div class="flex justify-between mb-4 w-full">
