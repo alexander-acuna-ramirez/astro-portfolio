@@ -8,10 +8,20 @@ import Skills from '../components/Skills/Skills.astro';
 
 <Layout
 	title="Home"
-	description="Lorem ipsum dolor sit amet"
+	description="My Portfolio"
 >
-	<Hero />
-	<Experience />
-	<Projects />
-	<Skills /> 
+	<Hero animate />
+	<Experience animate />
+	<Projects animate />
+	<Skills animate /> 
 </Layout>
+
+<script type="module">
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if(entry.isIntersecting) entry.target.classList.add("animate__fadeInUp")
+		});
+	});
+	const toAnimate = document.querySelectorAll('[animate]');
+	toAnimate.forEach(e => observer.observe(e));
+</script>
