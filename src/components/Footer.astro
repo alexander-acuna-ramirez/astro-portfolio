@@ -3,7 +3,7 @@ import GithubLogo from "./icons/GithubLogo.astro";
 import LinkedinLogo from "./icons/LinkedinLogo.astro";
 ---
 
-<footer class="w-full border-t border-[#444444]">
+<footer class="w-full max-w-[1280px] border-t border-[#444444]">
 	<div
 		id="contact"
 		class="w-full my-12 flex flex-col md:flex-row justify-between items-start px-6 md:px-12"
@@ -18,10 +18,10 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				project, please contact me. I look forward to hearing from you
 				and will respond promptly. Thank you for reaching out. Can you
 				mail me at <a
-					href="mailto:alexander.acuna@ucsm.edu.pe"
-					class="text-[#CBFE47]">alexander.acuna@ucsm.edu.pe</a
+					href="mailto:developer.alexander@outlook.com"
+					class="text-[#CBFE47]">developer.alexander@outlook.com</a
 				> or see my resume at <a
-					href="URL_TO_YOUR_RESUME"
+					href="https://drive.google.com/file/d/1e7GvZQUFH9_rsZYDRmYEBZDQbfsTPuvu/view?usp=sharing"
 					class="text-[#CBFE47]">this link</a
 				>?
 			</p>
@@ -29,13 +29,13 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 			<div class="mt-4">
 				<ul class="flex flex-row gap-x-6">
 					<li>
-						<a href="#" class="text-gray-500 hover:text-[#CBFE47]">
+						<a href="https://www.linkedin.com/in/alexander-acuna-ramirez/" class="text-gray-500 hover:text-[#CBFE47]">
 							<LinkedinLogo class="h-6 w-6 inline" />
 							My Linkedin</a
 						>
 					</li>
 					<li>
-						<a href="#" class="text-gray-500 hover:text-[#CBFE47]">
+						<a href="https://github.com/alexander-acuna-ramirez" class="text-gray-500 hover:text-[#CBFE47]">
 							<GithubLogo class="h-6 w-6 inline" />
 							My Github</a
 						>
@@ -46,10 +46,11 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 
 		<!-- Right Section -->
 		<div class="w-full md:w-2/4">
-			<div class="flex flex-col">
+			<form class="flex flex-col" action="https://formspree.io/f/xanwynbw" method="POST">
 				<div>
 					<label for="full_name">Full Name</label>
 					<input
+						required
 						type="text"
 						name="full_name"
 						id="full_name"
@@ -61,6 +62,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				<div>
 					<label for="email">Email Address</label>
 					<input
+						required
 						type="text"
 						name="email"
 						id="email"
@@ -72,6 +74,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				<div>
 					<label for="subject">Subject</label>
 					<input
+						required
 						type="text"
 						name="subject"
 						id="subject"
@@ -82,6 +85,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				<div>
 					<label for="message">Message</label>
 					<textarea
+						required
 						name="message"
 						id="message"
 						class="mt-1 px-4 w-full bg-transparent border border-gray-500"
@@ -89,6 +93,7 @@ import LinkedinLogo from "./icons/LinkedinLogo.astro";
 				</div>
 				<div>
 					<button
+						type="submit"
 						class="bg-[#CBFE47] rounded-lg px-6 py-4 mt-4 text-black hover:bg-transparent hover:text-[#CBFE47] hover:outline hover:outline-2 hover:outline-[#CBFE47]"
 					>
 						Get in touch
