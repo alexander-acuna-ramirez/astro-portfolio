@@ -8,8 +8,14 @@
 <script>
     const menuBtn = document.getElementById("menuBtn");
     const menu = document.getElementById("menu");
+    const menuLinks = menu?.getElementsByClassName("menuLink");
 
     menuBtn?.addEventListener("click", (_) => {
         menu?.classList.remove("-translate-x-full");
+        if(!menuLinks) return; 
+        Array.from(menuLinks).forEach(e => {
+            e.classList.add("animate__fadeInLeft")
+        });
     });
+
 </script>
