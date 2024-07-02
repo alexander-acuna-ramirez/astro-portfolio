@@ -7,22 +7,22 @@
     </div>
     <ul class="h-4/6 flex flex-col gap-y-4 w-full">
         <li>
-            <a href="#contact" style="animation-delay: .3s;" class="menuLink animate__animated text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+            <a href="#contact" class="menuLink animate__animated text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
                 Home
             </a>
         </li>
         <li>
-            <a href="#experience" style="animation-delay: .4s;" class="menuLink animate__animated animate__delay-2s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+            <a href="#experience" class="menuLink animate__animated animate__delay-2s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
                 Experience
             </a>
         </li>
         <li>
-            <a href="#projects" style="animation-delay: .5s;" class="menuLink animate__animated animate__delay-3s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+            <a href="#projects" class="menuLink animate__animated animate__delay-3s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
                 Projects
             </a>
         </li>
         <li>
-            <a href="#contact" style="animation-delay: .6s;" class="menuLink animate__animated animate__delay-4s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+            <a href="#contact" class="menuLink animate__animated animate__delay-4s text-4xl hover:text-[#CBFE47] relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#CBFE47] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
                 Contact Me
             </a>
         </li>
@@ -39,11 +39,16 @@
     const menu = document.getElementById("menu");
     const menuLinks = menu?.getElementsByClassName("menuLink");
 
-
     closeBtn?.addEventListener("click", (_) => {
         menu?.classList.add("-translate-x-full");
         if(!menuLinks) return;
         Array.from(menuLinks).forEach(e => e.classList.remove("animate__fadeInLeft"))
+    });
+
+    Array.from(menuLinks ?? []).forEach(link => {
+        link.addEventListener('click', (_) => {
+            menu?.classList.add("-translate-x-full");
+        });
     });
 </script>
 <style scoped>
@@ -57,4 +62,19 @@
         position: relative;
         top: -0.125rem;
     }
+
+    ul > li:nth-child(1) > a {
+        animation-delay: .2s;
+    }
+    ul > li:nth-child(2) > a {
+        animation-delay: .3s;
+    }
+    ul > li:nth-child(3) > a {
+        animation-delay: .4s;
+    }
+    ul > li:nth-child(4) > a {
+        animation-delay: .5s;
+    }
+
+
 </style>
