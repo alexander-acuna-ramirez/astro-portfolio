@@ -19,7 +19,9 @@ import Skills from '../components/Skills/Skills.astro';
 <script type="module">
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			if(entry.isIntersecting) entry.target.classList.add("animate__fadeInUp")
+			if(entry.isIntersecting) {
+				entry.target.classList.add("animate__fadeIn");
+			}
 		});
 	});
 	const toAnimate = document.querySelectorAll('section[animate]');

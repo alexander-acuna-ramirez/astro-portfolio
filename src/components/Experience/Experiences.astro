@@ -66,10 +66,11 @@ import Experience from "./Experience.astro"
 </section>
 <script type="module">
     const elements = document.querySelectorAll("div[animate]");
-    console.log(elements)
     const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			if(entry.isIntersecting) entry.target.classList.add("animate__fadeInUp")
+			if(entry.isIntersecting) {
+                entry.target.classList.add("animate__fadeIn");
+            }
 		});
 	});
 
